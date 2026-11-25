@@ -5,8 +5,8 @@
   "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
@@ -15,9 +15,10 @@
   },
   "dependencies": {
     "@expo/metro-runtime": "~58.0.17",
-    "@lodev09/react-native-true-sheet": "^4.1.0",
+    "@lodev09/react-native-true-sheet": "^4.1.2",
     "expo": "~58.0.26",
     "expo-constants": "~58.0.16",
+    "expo-dev-client": "~58.0.21",
     "expo-linking": "~58.0.17",
     "expo-router": "~58.0.32",
     "expo-splash-screen": "~58.0.14",

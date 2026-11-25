@@ -15,7 +15,8 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.khasa11.onewall"
     },
     "plugins": [
       "expo-router",
@@ -32,6 +33,16 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "194127d1-9725-4c37-bd79-d84b39958a0d"
+      }
     }
   }
 }
