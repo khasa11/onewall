@@ -1,44 +1,107 @@
-# Welcome to your HeroUI Native app 👋
+# OneWall
 
-This is an [Expo](https://expo.dev) project preconfigured with
-[HeroUI Native](https://heroui.com/docs/native), [Uniwind](https://docs.uniwind.dev)
-(Tailwind CSS for React Native), and [Expo Router](https://docs.expo.dev/router/introduction).
+**OneWall** is a wallpaper creation app that lets users design unique wallpapers using geometric compositions, photos, and colors.
 
-## Get started
+The app combines ready-made layouts with customizable geometric elements, giving users an easy way to create personalized wallpapers without using complex graphic design tools.
 
-1. Install dependencies
+## Features
 
-   ```bash
-   npm install
-   ```
+- Browse and choose from ready-made geometric compositions.
+- Fill individual areas with photos or colors.
+- Customize shapes, spacing, margins, and corner rounding.
+- Rearrange and replace elements.
+- Use personal photos.
+- Preview and export wallpapers in high resolution.
+- Save wallpapers to the device.
 
-2. Start the app
+## Tech Stack
 
-   ```bash
-   npx expo start
-   ```
+- **React Native** — cross-platform mobile framework.
+- **Expo** — development and build infrastructure.
+- **TypeScript** — type safety.
+- **Expo Router** — navigation.
+- **HeroUI Native** — user interface components.
+- **React Native Skia** — graphics rendering.
+- **React Native Reanimated** — animations.
+- **React Native Gesture Handler** — touch and gesture handling.
 
-In the output, you'll find options to open the app in a
+## Requirements
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- Node.js
+- npm
+- Android Studio and Android SDK (for Android development)
+- Expo Development Build
 
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Installation
 
-## What's preconfigured
+Clone the repository:
 
-- **HeroUI Native** (`heroui-native`) wrapped in `HeroUINativeProvider` and `GestureHandlerRootView` in `src/app/_layout.tsx`
-- **Uniwind** + **Tailwind CSS** wired through `metro.config.js` and `src/global.css`
-- All HeroUI Native mandatory peer dependencies: `react-native-reanimated`, `react-native-gesture-handler`, `react-native-worklets`, `react-native-safe-area-context`, `react-native-svg`, `react-native-screens`
-- `@lodev09/react-native-true-sheet` for bottom-sheet UIs
-- TypeScript with `strict: true` and `@/*` path alias to `./src/*`
-- React Compiler enabled
+```bash
+git clone <repository-url>
+cd onewall
+```
 
-## Learn more
+Install dependencies:
 
-- [HeroUI Native components](https://heroui.com/docs/native) — full component reference
-- [Expo documentation](https://docs.expo.dev/) — Expo fundamentals and guides
-- [Uniwind documentation](https://docs.uniwind.dev) — Tailwind for React Native
-- [Expo Router](https://docs.expo.dev/router/introduction) — file-based routing
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npx expo start --dev-client
+```
+
+To restart with a cleared cache:
+
+```bash
+npx expo start --dev-client --clear
+```
+
+**Note:** OneWall uses native modules and requires an Expo Development Build. It cannot run in the standard Expo Go app.
+
+## Android Build
+
+Create a development build:
+
+```bash
+npx eas-cli@latest build --platform android --profile development
+```
+
+Create a production build:
+
+```bash
+npx eas-cli@latest build --platform android --profile production
+```
+
+EAS Build generates standalone Android packages:
+
+- **APK** — direct installation and distribution.
+- **AAB** — Google Play distribution.
+
+## Project Structure
+
+```text
+onewall/
+├── assets/
+├── src/
+│   ├── app/
+│   │   ├── _layout.tsx
+│   │   ├── index.tsx
+│   │   └── explore.tsx
+│   ├── components/
+│   ├── constants/
+│   ├── hooks/
+│   ├── types/
+│   │   └── WallpaperBlock.ts
+│   └── global.css
+├── app.json
+├── eas.json
+├── package.json
+└── README.md
+```
+
+## License
+
+Not specified yet.
